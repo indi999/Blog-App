@@ -25,8 +25,13 @@
                 <p>{{ $post->body }}</p>
             </blockquote>
             <p>{{ $post->body }}</p>
-        </div><!-- /.blog-post -->
 
+            <!-- comments -->
+            @include('posts.comments')
+            <!-- end comments -->
+
+
+        </div><!-- /.blog-post -->
 
       </div><!-- /.blog-main -->
 

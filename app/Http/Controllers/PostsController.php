@@ -34,4 +34,5 @@ class PostsController extends Controller
         # redirect to the new loction
         return redirect('/');
     }
+
 }
