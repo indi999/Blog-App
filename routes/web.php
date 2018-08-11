@@ -18,7 +18,7 @@ Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
 
-
+//dd(resolve('App\Billing\Stripe'));
 // Controller => PosrsController
 // Eloquent model => Post
 // migration => create_post_table
