@@ -12,6 +12,10 @@ class Post extends Model
   public function user(){
       return $this->belongsTo(User::class);
   }
+  public function tags()
+   {
+      return $this->belongsToMany(Tag::class);
+   }
 
   
    // add comment function
@@ -40,4 +44,6 @@ class Post extends Model
             $query->whereYear('created_at', Carbon::parse($year)->year);
         }
    }
+
+   
 }
