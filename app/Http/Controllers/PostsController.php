@@ -17,6 +17,7 @@ class PostsController extends Controller
        // $posts = (new \App\Repositories\Posts)->all();
        //dd($posts);
        $posts = $posts->all();
+       //session('message');
         
     /*    
         $posts = Post::latest()
@@ -45,7 +46,8 @@ class PostsController extends Controller
            new Post(request(['title', 'body']))
         );
 
-    
+        // Flash message
+        session()->flash('message', 'Your post has publish!');
 
         # Create new post
         # to the databases

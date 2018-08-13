@@ -19,6 +19,8 @@ class RegistrationController extends Controller
  
         //add and save user to the DB
         $form->persist();
+        // return thanks for registration message
+        session()->flash('message', 'Thank`s for your registration!');
 
         // redirect to home page
         return redirect()->home();
