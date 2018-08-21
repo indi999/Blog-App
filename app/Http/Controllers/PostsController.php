@@ -16,6 +16,7 @@ class PostsController extends Controller
     public function index(Post $posts){
        // $posts = (new \App\Repositories\Posts)->all();
        //dd($posts);
+
        $posts = $posts->all();
        //session('message');
         
