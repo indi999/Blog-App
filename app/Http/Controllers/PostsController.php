@@ -19,7 +19,7 @@ class PostsController extends Controller
        //dd($posts);
 
        $posts = $posts->all();
-       dd($posts);
+       //dd($posts);
        //session('message');
         
     /*    
