@@ -13,11 +13,13 @@ class PostsController extends Controller
         $this->middleware('auth')->except(['index','show']);
     }
 
+
     public function index(Post $posts){
        // $posts = (new \App\Repositories\Posts)->all();
        //dd($posts);
 
        $posts = $posts->all();
+       dd($posts);
        //session('message');
         
     /*    

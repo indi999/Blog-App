@@ -8,7 +8,7 @@ Route::get('/posts/{post}', 'PostsController@show');
 # comment
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 # tags
-Route::get('/posts/tags/{$tag}', 'TagsController@index');
+Route::get('/posts/tags/{tag}', 'TagsController@index');
 
 #users routes
 # Route::get('/register', 'AuthController@register');

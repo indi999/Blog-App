@@ -59,10 +59,17 @@
                 <a href="/posts/{{ $post->id }}"><h2 class="blog-post-title"> {{ $post->title }} </h2></a>
 
                 <p class="blog-post-meta">{{ $post->created_at->toFormattedDateString() }} by <a href="#">{{ $post->user->name }}</a></p>
-                <blockquote>
+            @if(count($post->tags))
+                <p class="blog-post-meta"><b>tags: </b>
+                @foreach($post->tags as $tag)
+                    <span><a href="/posts/tags/{{ $tag->name }}"> {{ $tag->name }}</a> ,</span> 
+                @endforeach
+                </p>
+            @endif
+                <blockquote>    
                     <p>{{ $post->body }}</p>
                 </blockquote>
-                <p>{{ $post->body }}</p>
+               
             </div><!-- /.blog-post -->
 
             @endforeach
